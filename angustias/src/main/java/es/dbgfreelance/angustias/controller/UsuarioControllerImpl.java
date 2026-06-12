@@ -14,22 +14,22 @@ import es.dbgfreelance.angustias.modelo.Usuario;
 @RestController
 @RequestMapping("/usuarios")
 public class UsuarioControllerImpl implements UsuarioController {
-    private final UsuarioService usuarioService;
+  private final UsuarioService usuarioService;
 
-    public UsuarioControllerImpl(UsuarioService usuarioService) {
-        this.usuarioService = usuarioService;
-    }   
+  public UsuarioControllerImpl(UsuarioService usuarioService) {
+    this.usuarioService = usuarioService;
+  }
 
-    @Override
-    @GetMapping
-    public List<Usuario> getAllUsuarios() {
-        return usuarioService.getAllUsuarios();
-    }
+  @Override
+  @GetMapping
+  public List<Usuario> getAllUsuarios() {
+    return usuarioService.obtenerUsuarios();
+  }
 
-    @Override
-    @PostMapping
-    public Usuario createUsuario(@RequestBody Usuario usuario) {
-        return usuarioService.createUsuario(usuario);
-    }
+  @Override
+  @PostMapping
+  public Usuario createUsuario(@RequestBody Usuario usuario) {
+    return usuarioService.guardarUsuario(usuario);
+  }
 
 }
