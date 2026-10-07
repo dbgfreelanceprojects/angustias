@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class InicioController {
  @GetMapping("/hola")
     public String hola() {
-        return "Hola desde Spring Boot";
+        return "Este sería un cambio desde el branch del sprint 1 para probar el merge con el branche de desa";
     }
 }
